@@ -8,12 +8,12 @@ const NavigationStyled = styled.div`
 `
 
 const NavItems = [
-    {svgUrl: "@img/HomeIcon.svg", routes: "/home"},
-    {svgUrl: "@img/StaffIcon.svg", routes: "/staff"},
-    {svgUrl: "@img/StatisticsIcon.svg", routes: "/statistics"},
-    {svgUrl: "@img/SalariesIcon.svg", routes: "/salaries"},
-    {svgUrl: "@img/WarehouseIcon.svg", routes: "/warehouse"},
-    {svgUrl: "@img/ArchivesIcon.svg", routes: "/archive"}
+    {svgUrl: "/src/assets/img/HomeIcon.svg", routes: "/home"},
+    {svgUrl: "/src/assets/img/StaffIcon.svg", routes: "/staff"},
+    {svgUrl: "/src/assets/img/StatisticsIcon.svg", routes: "/statistics"},
+    {svgUrl: "/src/assets/img/SalariesIcon.svg", routes: "/salaries"},
+    {svgUrl: "/src/assets/img/WarehouseIcon.svg", routes: "/warehouse"},
+    {svgUrl: "/src/assets/img/ArchiveIcon.svg", routes: "/archive"}
 ]
 
 export function Navigation() {
