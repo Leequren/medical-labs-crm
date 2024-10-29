@@ -54,7 +54,7 @@ export function OrdersStatus() {
         <OrdersStatusStyled>
             <AddButton onClick={() => { }}>
                 <AddButtonSvgContainer>
-                    <Plus />
+                    <Plus stroke="black"/>
                 </AddButtonSvgContainer>
                 <AddButtonText>Добавить наряд</AddButtonText>
             </AddButton>
