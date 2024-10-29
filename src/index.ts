@@ -1,4 +1,6 @@
+import { serve } from "@hono/node-server";
 import { drizzle } from "drizzle-orm/node-postgres";
+import { Hono } from "hono";
 import { databaseUrl } from "./config/consts.js";
 import { usersTable } from "./db/schema.js";
 
@@ -31,16 +33,16 @@ main().catch((err) => {
   console.error("Error", err);
 });
 
-// const app = new Hono();
-// console.log(process.env);
-// app.get("/", (c) => {
-//   return c.text("Hello Hono!");
-// });
+const app = new Hono();
+console.log(process.env);
+app.get("/", (c) => {
+  return c.text("Hello Hono!");
+});
 
-// const port = 3000;
-// console.log(`Server is running on http://localhost:${port}`);
+const port = 3000;
+console.log(`Server is running on http://localhost:${port}`);
 
-// serve({
-//   fetch: app.fetch,
-//   port,
-// });
+serve({
+  fetch: app.fetch,
+  port,
+});
