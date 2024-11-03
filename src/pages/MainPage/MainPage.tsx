@@ -4,8 +4,8 @@ import { InWork } from "./inWork/InWork"
 
 const MainPageStyled = styled.div`
 	width: 100%;
-	margin-right: 50px;
 	padding-top: 10px;
+	overflow: hidden;
 `
 
 export function MainPage() {

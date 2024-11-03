@@ -2,8 +2,11 @@ import styled from "styled-components"
 import Plus from "@img/plus.svg?react"
 import { StatusItem } from "./StatusItem"
 
-
 const OrdersStatusStyled = styled.div`
+    margin-right: 50px;
+`
+
+const OrdersStatusStyledContainer = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -52,17 +55,19 @@ export function OrdersStatus() {
 
     return (
         <OrdersStatusStyled>
-            <AddButton onClick={() => { }}>
-                <AddButtonSvgContainer>
-                    <Plus stroke="black"/>
-                </AddButtonSvgContainer>
-                <AddButtonText>Добавить наряд</AddButtonText>
-            </AddButton>
-            <StatusItemContainer>
-                <StatusItem color={'#BDFF67'} currentNumber={23} todayNumber={13} text={'В работе'} />
-                <StatusItem color={'#BDFF67'} currentNumber={13} todayNumber={4} text={'выполнено'} />
-                <StatusItem color={'#FF9699'} currentNumber={4} todayNumber={2} text={'дедлайн'} />
-            </StatusItemContainer>
+            <OrdersStatusStyledContainer>
+                <AddButton onClick={() => { }}>
+                    <AddButtonSvgContainer>
+                        <Plus stroke="black" />
+                    </AddButtonSvgContainer>
+                    <AddButtonText>Добавить наряд</AddButtonText>
+                </AddButton>
+                <StatusItemContainer>
+                    <StatusItem color={'#BDFF67'} currentNumber={23} todayNumber={13} text={'В работе'} />
+                    <StatusItem color={'#BDFF67'} currentNumber={13} todayNumber={4} text={'выполнено'} />
+                    <StatusItem color={'#FF9699'} currentNumber={4} todayNumber={2} text={'дедлайн'} />
+                </StatusItemContainer>
+            </OrdersStatusStyledContainer>
         </OrdersStatusStyled>
     )
 }

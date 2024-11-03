@@ -2,6 +2,7 @@ import styled from "styled-components";
 import BgSvg1 from "@img/background-card1.svg?react";
 import BgSvg2 from "@img/background-card2.svg?react";
 import { InWorkButton } from "./InWorkButton";
+import { InWorkCardItems } from "./InWorkCardItems";
 
 const InWorkCardItemContainerStyled = styled.div`
     position: relative;
@@ -10,11 +11,10 @@ const InWorkCardItemContainerStyled = styled.div`
 const InWorkCardItemStyled = styled.div`
     position: relative;
     display: inline-block;
-    padding: 20px;
+    padding: 35px;
     border-radius: 45px;
     overflow: hidden;
-    height: 400px;
-    width: 500px;
+    height: 414px;
 
     &::before {
         content: "";
@@ -91,7 +91,7 @@ export function InWorkCardItem() {
                 </SvgOverlayContainer>
                 <BlurOverlay />
                 <InWorkCardItemContentStyled>
-                    
+                    <InWorkCardItems/>
                 </InWorkCardItemContentStyled>
             </InWorkCardItemStyled>
             <InWorkButtonContainerStyled>
