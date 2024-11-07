@@ -3,10 +3,10 @@ import { InWorkCardItem } from "./InWorkCardItem"
 
 const InWorkCardStyled = styled.div`
     display: flex;
-    padding: 40px 0;
+    padding: 15px 0;
     gap: 25px;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: hidden;
 `
 
 export function InWorkCard() {
