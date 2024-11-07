@@ -53,7 +53,6 @@ const MainDateContainer = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
-    
     color: #CACACA;
 `
 
@@ -74,7 +73,7 @@ const Footer = styled.div`
     height: 44px;
 `
 
-const FooterPrice = styled.span <{ isPay: boolean }>`
+const FooterPrice = styled.span <{ $isPay: boolean }>`
     display: flex;
     align-items: center;
     border: 2px solid #5D5D5D;
@@ -84,15 +83,15 @@ const FooterPrice = styled.span <{ isPay: boolean }>`
     padding: 10px 15px;
     color: white;
     white-space: nowrap;
-    text-decoration: ${props => props.isPay ? "line-through" : ""};
+    text-decoration: ${props => props.$isPay ? "line-through" : ""};
 `
 
-const FooterPaymentButton = styled.div <{ isPay: boolean }>`
+const FooterPaymentButton = styled.div <{ $isPay: boolean }>`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: ${props => props.isPay ? "transparent" : "#BDFF67"};
-    border: ${props => props.isPay ? "1px solid #BDFF67" : ""};
+    background: ${props => props.$isPay ? "transparent" : "#BDFF67"};
+    border: ${props => props.$isPay ? "1px solid #BDFF67" : ""};
     border-radius: 10px;
     font-size: 20px;
     font-weight: 500;
@@ -130,9 +129,9 @@ export function CouriersOrderCard() {
                 </MainContainer>
             </Header>
             <Footer>
-                <FooterPrice isPay={isPay}>267 ₽</FooterPrice>
-                <FooterPaymentButton onClick={() => setIsPay(!isPay)} isPay={isPay}>
-                    {!isPay ? "Оплата" : <Check />}
+                <FooterPrice $isPay={isPay}>267 ₽</FooterPrice>
+                <FooterPaymentButton onClick={() => setIsPay(!isPay)} $isPay={isPay}>
+                    {!isPay ? "Оплата" : <Check stroke="#BDFF67" />}
                 </FooterPaymentButton>
                 <FooterInfoButton><Clipboard /></FooterInfoButton>
             </Footer>

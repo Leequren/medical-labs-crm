@@ -8,9 +8,9 @@ const CouriersTabSwitcherStyled = styled.div`
     justify-content: space-between;
 `
 
-const CouriersTabSwitcherButton = styled.button <{ isActive: boolean }>`
-    background: ${({ isActive }) => (isActive ? '#E8E8E8' : 'transparent')};
-    color: ${({ isActive }) => (isActive ? 'black' : 'white')};
+const CouriersTabSwitcherButton = styled.button <{ $isActive: boolean }>`
+    background: ${({ $isActive }) => ($isActive ? '#E8E8E8' : 'transparent')};
+    color: ${({ $isActive }) => ($isActive ? 'black' : 'white')};
     border-radius: 12px;
     font-size: 24px;
     font-weight: 500;
@@ -34,13 +34,13 @@ export function CouriersTabSwitcher() {
     return (
         <CouriersTabSwitcherStyled>
             <CouriersTabSwitcherButton
-                isActive={isBring}
+                $isActive={isBring}
                 onClick={() => setIsBring(true)}
             >
                 Привез
             </CouriersTabSwitcherButton>
             <CouriersTabSwitcherButton
-                isActive={!isBring}
+                $isActive={!isBring}
                 onClick={() => setIsBring(false)}
             >
                 Отвез

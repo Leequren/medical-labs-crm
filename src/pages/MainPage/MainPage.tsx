@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { OrdersStatus } from "./ordersStatus/OrdersStatus"
 import { InWork } from "./inWork/InWork"
 import { Couriers } from "./couriers/Сouriers"
+import { TaskSchedule } from "./taskSchedule/TaskSchedule"
 
 const MainPageStyled = styled.div`
 	display: flex;
@@ -12,12 +13,21 @@ const MainPageStyled = styled.div`
 	gap: 50px;
 `
 
+const TaskAndCouriersContainer = styled.div`
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+`
+
 export function MainPage() {
 	return (
 		<MainPageStyled>
-            <OrdersStatus />
+			<OrdersStatus />
 			<InWork />
-			<Couriers />
+			<TaskAndCouriersContainer>
+				<TaskSchedule />
+				<Couriers />
+			</TaskAndCouriersContainer>
 		</MainPageStyled>
 	)
 }
