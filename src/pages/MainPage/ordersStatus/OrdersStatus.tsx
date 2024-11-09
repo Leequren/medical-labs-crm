@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import Plus from "@img/plus.svg?react"
 import { StatusItem } from "./StatusItem"
+import { useNavigate } from "react-router-dom"
+import { routes } from "../../../config/routes"
 
 const OrdersStatusStyled = styled.div`
     margin-right: 50px;
@@ -53,10 +55,12 @@ const StatusItemContainer = styled.div`
 
 export function OrdersStatus() {
 
+    const navigate = useNavigate()
+
     return (
         <OrdersStatusStyled>
             <OrdersStatusStyledContainer>
-                <AddButton onClick={() => { }}>
+                <AddButton onClick={() => navigate(routes.addShift) }>
                     <AddButtonSvgContainer>
                         <Plus stroke="black" />
                     </AddButtonSvgContainer>

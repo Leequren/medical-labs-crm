@@ -16,7 +16,8 @@ const MainPageStyled = styled.div`
 const TaskAndCouriersContainer = styled.div`
 	display: flex;
 	gap: 20px;
-	justify-content: center;
+	justify-content: space-between;
+	margin-right: 50px;
 `
 
 export function MainPage() {

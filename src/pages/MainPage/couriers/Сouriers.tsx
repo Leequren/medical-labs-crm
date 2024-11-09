@@ -12,6 +12,7 @@ const CouriersStyled = styled.div`
     background: #1C1C1C;
     border-radius: 45px;
     padding: 35px;
+    height: fit-content;
 `
 
 const Header = styled.div`
@@ -43,6 +44,7 @@ const HeaderButton = styled.div`
     border-radius: 1000px;
     cursor: pointer;
     background: transparent;
+    user-select: none;
 `
 
 export function Couriers() {

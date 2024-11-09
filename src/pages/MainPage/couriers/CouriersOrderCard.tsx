@@ -97,6 +97,7 @@ const FooterPaymentButton = styled.div <{ $isPay: boolean }>`
     font-weight: 500;
     width: 100%;
     cursor: pointer;
+    user-select: none;  
 `
 
 const FooterInfoButton = styled.div`
