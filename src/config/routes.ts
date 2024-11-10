@@ -5,7 +5,11 @@ export enum routes {
     statistics = "/statistics",
     salaries = "/salaries",
     warehouse = "/warehouse",
-    archive = "/archive"
+    archive = "/archive",
+    doctors = "/staff/doctors",
+    techniques = "/staff/techniques",
+    typesWork = "/staff/typesWork",
+    categoryTechniques = "/staff/category-techniques",
 }
 
 export enum backendRoutes {
