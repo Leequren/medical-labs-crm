@@ -201,7 +201,7 @@ export function InWorkCardItems() {
             <FooterCardContainer>
                 <FooterButtonContainer>
                     <FooterMoreButton>
-                        <img src="/src/assets/img/arrow-down.svg" alt="" />
+                        <img src="/src/assets/img/ArrowDown.svg" alt="" />
                     </FooterMoreButton>
                     <FooterCloseButton>Закрыть наряд</FooterCloseButton>
                 </FooterButtonContainer>

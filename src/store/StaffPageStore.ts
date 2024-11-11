@@ -85,8 +85,12 @@ const initialCategoryStaffPage: CategoryStaffPage[] = [
 ];
 
 const initialDoctors: Doctors[] = [
-    { id: 1, firstName: "Сергей", lastName: "Тимус", middleName: "Александрович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "img1.jpg", categoryId: 1 },
-    { id: 2, firstName: "Евгений", lastName: "Завадский", middleName: "Станиславович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "img2.jpg", categoryId: 1 },
+    { id: 1, firstName: "Сергей", lastName: "Тимус", middleName: "Александрович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 2, firstName: "Евгений", lastName: "Завадский", middleName: "Станиславович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 3, firstName: "Сергей", lastName: "Тимус", middleName: "Александрович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 4, firstName: "Евгений", lastName: "Завадский", middleName: "Станиславович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 5, firstName: "Сергей", lastName: "Тимус", middleName: "Александрович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 6, firstName: "Евгений", lastName: "Завадский", middleName: "Станиславович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
 ];
 
 const initialTechniques: Techniques[] = [

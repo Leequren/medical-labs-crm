@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { useStore } from "../../store/StaffPageStore"
-import ArrowLink from "@img/Arrow-Link-Staff.svg?react"
+import ArrowLink from "@img/ArrowLinkStaff.svg?react"
 import { useNavigate } from "react-router-dom"
 
 const StaffPageCardStyled = styled.div`
@@ -15,6 +15,7 @@ const StaffPageCardContainerStyled = styled.div`
     align-items: center;
     padding: 17px 17px 17px 30px;
     width: 397px;
+    max-height: 120px;
     background: #1C1C1C;
     border-radius: 20px;
 `
@@ -22,6 +23,7 @@ const StaffPageCardContainerStyled = styled.div`
 const StaffPageCardNameContainer = styled.div`
     display: flex;
     flex-direction: column;
+    max-width: 220px;
     gap: 5px;
 `
 

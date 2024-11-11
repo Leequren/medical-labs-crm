@@ -10,6 +10,7 @@ export enum routes {
     techniques = "/staff/techniques",
     typesWork = "/staff/typesWork",
     categoryTechniques = "/staff/category-techniques",
+    addDoctor = "/staff/add-doctor",
 }
 
 export enum backendRoutes {
