@@ -94,8 +94,8 @@ const initialDoctors: Doctors[] = [
 ];
 
 const initialTechniques: Techniques[] = [
-    { id: 1, firstName: "Николай", lastName: "Боремский", middleName: "Владимирович", imgUrl: "img3.jpg", categoryId: 2 },
-    { id: 2, firstName: "Мария", lastName: "Дарвиш", middleName: "Владимировна", imgUrl: "img4.jpg", categoryId: 2 },
+    { id: 1, firstName: "Николай", lastName: "Боремский", middleName: "Владимирович", imgUrl: "/image/2.png", categoryId: 2 },
+    { id: 2, firstName: "Мария", lastName: "Дарвиш", middleName: "Владимировна", imgUrl: "/image/2.png", categoryId: 2 },
 ];
 
 const initialTypesWork: TypesWork[] = [
