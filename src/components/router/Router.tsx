@@ -5,6 +5,7 @@ import { routes } from "../../config/routes";
 import { StaffPage } from "../../pages/StaffPage/StaffPage";
 import { DoctorsPage } from "../../pages/DoctorsPage/DoctorsPage";
 import { TechniquesPage } from "../../pages/TechniquesPage/TechniquesPage";
+import { TypesWorkPage } from "../../pages/TypesWorkPage/TypesWorkPage";
 
 export const router = createBrowserRouter(
   [
@@ -15,6 +16,7 @@ export const router = createBrowserRouter(
         { path: routes.staff, element: <StaffPage /> },
         { path: routes.doctors, element: <DoctorsPage /> },
         { path: routes.techniques, element: <TechniquesPage /> },
+        { path: routes.typesWork, element: <TypesWorkPage /> },
       ],
     },
   ]

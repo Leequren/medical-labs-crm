@@ -42,6 +42,7 @@ type TypesWorkStages = {
     nameTypeWorkStage: string,
     nameMaterial: string,
     pricePiece: number,
+    namePiece?: string,
     priceMaterial: number,
     totalPrice: number,
     typeWorkId: number
@@ -78,37 +79,44 @@ export type Store = {
 }
 
 const initialCategoryStaffPage: CategoryStaffPage[] = [
-    { id: 1, nameCategory: "Врачи", counterCategory: 17, nameSubcategory: "Специалисты", route: routes.doctors },
-    { id: 2, nameCategory: "Техники", counterCategory: 9, nameSubcategory: "Специалисты", route: routes.techniques },
-    { id: 3, nameCategory: "Виды работ", counterCategory: 36, nameSubcategory: "Наименования", route: routes.typesWork },
-    { id: 4, nameCategory: "Категория техников", counterCategory: 3, nameSubcategory: "Категории", route: routes.categoryTechniques },
+    { id: 0, nameCategory: "Врачи", counterCategory: 17, nameSubcategory: "Специалисты", route: routes.doctors },
+    { id: 1, nameCategory: "Техники", counterCategory: 9, nameSubcategory: "Специалисты", route: routes.techniques },
+    { id: 2, nameCategory: "Виды работ", counterCategory: 36, nameSubcategory: "Наименования", route: routes.typesWork },
+    { id: 3, nameCategory: "Категория техников", counterCategory: 3, nameSubcategory: "Категории", route: routes.categoryTechniques },
 ];
 
 const initialDoctors: Doctors[] = [
-    { id: 1, firstName: "Сергей", lastName: "Тимус", middleName: "Александрович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
-    { id: 2, firstName: "Евгений", lastName: "Завадский", middleName: "Станиславович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
-    { id: 3, firstName: "Сергей", lastName: "Тимус", middleName: "Александрович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
-    { id: 4, firstName: "Евгений", lastName: "Завадский", middleName: "Станиславович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
-    { id: 5, firstName: "Сергей", lastName: "Тимус", middleName: "Александрович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
-    { id: 6, firstName: "Евгений", lastName: "Завадский", middleName: "Станиславович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 0, firstName: "Сергей", lastName: "Тимус", middleName: "Александрович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 1, firstName: "Евгений", lastName: "Завадский", middleName: "Станиславович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 2, firstName: "Сергей", lastName: "Тимус", middleName: "Александрович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 3, firstName: "Евгений", lastName: "Завадский", middleName: "Станиславович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 4, firstName: "Сергей", lastName: "Тимус", middleName: "Александрович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 5, firstName: "Евгений", lastName: "Завадский", middleName: "Станиславович", nameClinic: "Медгарант", address: "Екатеринбург, Казаса 15", imgUrl: "/image/2.png", categoryId: 1 },
 ];
 
 const initialTechniques: Techniques[] = [
-    { id: 1, firstName: "Николай", lastName: "Боремский", middleName: "Владимирович", imgUrl: "/image/2.png", categoryId: 2 },
-    { id: 2, firstName: "Мария", lastName: "Дарвиш", middleName: "Владимировна", imgUrl: "/image/2.png", categoryId: 2 },
+    { id: 0, firstName: "Николай", lastName: "Боремский", middleName: "Владимирович", imgUrl: "/image/2.png", categoryId: 2 },
+    { id: 1, firstName: "Мария", lastName: "Дарвиш", middleName: "Владимировна", imgUrl: "/image/2.png", categoryId: 2 },
 ];
 
 const initialTypesWork: TypesWork[] = [
-    { id: 1, typesProsthetics: "Металлокерамика", nameTypeWork: "Металлокерамическая коронка", imgUrl: "img5.jpg", stages: [] },
+    { id: 0, typesProsthetics: "Несъемное", nameTypeWork: "Металло-керамическая коронка", imgUrl: "/image/3.png", stages: [] },
+    { id: 1, typesProsthetics: "Съемное", nameTypeWork: "Индивидуальная ложка под имплант", imgUrl: "/image/3.png", stages: [] },
 ];
 
 const initialTypesWorkStages: TypesWorkStages[] = [
-    { id: 1, nameTypeWorkStage: "Лепка", nameMaterial: "Циркониевый диск", pricePiece: 780, priceMaterial: 320, totalPrice: 1100, typeWorkId: 1 },
-    { id: 2, nameTypeWorkStage: "Каркас", nameMaterial: "Циркониевый диск", pricePiece: 620, priceMaterial: 260, totalPrice: 880, typeWorkId: 1 },
+    { id: 0, nameTypeWorkStage: "Гипсовка", nameMaterial: "Циркониевый диск", pricePiece: 232, namePiece: "коронка", priceMaterial: 120, totalPrice: 780, typeWorkId: 0 },
+    { id: 1, nameTypeWorkStage: "Каркас", nameMaterial: "Нет", pricePiece: 0, priceMaterial: 320, totalPrice: 1280, typeWorkId: 0 },
+    { id: 2, nameTypeWorkStage: "Грунт", nameMaterial: "Нет", pricePiece: 0, priceMaterial: 80, totalPrice: 340, typeWorkId: 0 },
+    { id: 3, nameTypeWorkStage: "Нанесение", nameMaterial: "Нет", pricePiece: 0, priceMaterial: 100, totalPrice: 420, typeWorkId: 0 },
+    { id: 4, nameTypeWorkStage: "Гипсовка", nameMaterial: "Циркониевый диск", pricePiece: 232, namePiece: "коронка", priceMaterial: 120, totalPrice: 780, typeWorkId: 1 },
+    { id: 5, nameTypeWorkStage: "Каркас", nameMaterial: "Нет", pricePiece: 0, priceMaterial: 320, totalPrice: 1280, typeWorkId: 1 },
+    { id: 6, nameTypeWorkStage: "Грунт", nameMaterial: "Нет", pricePiece: 0, priceMaterial: 80, totalPrice: 340, typeWorkId: 1 },
+    { id: 7, nameTypeWorkStage: "Нанесение", nameMaterial: "Нет", pricePiece: 0, priceMaterial: 100, totalPrice: 420, typeWorkId: 1 },
 ];
 
 const initialCategoryTechniques: CategoryTechniques[] = [
-    { id: 1, nameCategory: "Техники высшей категории", techniques: [] },
+    { id: 0, nameCategory: "Техники высшей категории", techniques: [] },
 ];
 
 export const useStore = create<Store>((set) => ({
