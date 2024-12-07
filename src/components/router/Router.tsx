@@ -6,6 +6,7 @@ import { StaffPage } from "../../pages/StaffPage/StaffPage";
 import { DoctorsPage } from "../../pages/DoctorsPage/DoctorsPage";
 import { TechniquesPage } from "../../pages/TechniquesPage/TechniquesPage";
 import { TypesWorkPage } from "../../pages/TypesWorkPage/TypesWorkPage";
+import { CategoryTechniquesPage } from "../../pages/CategoryTechniquesPage/CategoryTechniquesPage";
 
 export const router = createBrowserRouter(
   [
@@ -17,6 +18,7 @@ export const router = createBrowserRouter(
         { path: routes.doctors, element: <DoctorsPage /> },
         { path: routes.techniques, element: <TechniquesPage /> },
         { path: routes.typesWork, element: <TypesWorkPage /> },
+        { path: routes.categoryTechniques, element: <CategoryTechniquesPage /> },
       ],
     },
   ]

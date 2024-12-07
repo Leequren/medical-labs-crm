@@ -95,8 +95,13 @@ const initialDoctors: Doctors[] = [
 ];
 
 const initialTechniques: Techniques[] = [
-    { id: 0, firstName: "Николай", lastName: "Боремский", middleName: "Владимирович", imgUrl: "/image/2.png", categoryId: 2 },
-    { id: 1, firstName: "Мария", lastName: "Дарвиш", middleName: "Владимировна", imgUrl: "/image/2.png", categoryId: 2 },
+    { id: 0, firstName: "Николай", lastName: "Боремский", middleName: "Владимирович", imgUrl: "/image/2.png", categoryId: 0 },
+    { id: 1, firstName: "Мария", lastName: "Дарвиш", middleName: "Владимировна", imgUrl: "/image/2.png", categoryId: 0 },
+    { id: 2, firstName: "Мария", lastName: "Дарвиш", middleName: "Владимировна", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 3, firstName: "Мария", lastName: "Дарвиш", middleName: "Владимировна", imgUrl: "/image/2.png", categoryId: 1 },
+    { id: 4, firstName: "Мария", lastName: "Дарвиш", middleName: "Владимировна", imgUrl: "/image/2.png", categoryId: 2 },
+    { id: 5, firstName: "Мария", lastName: "Дарвиш", middleName: "Владимировна", imgUrl: "/image/2.png", categoryId: 2 },
+    { id: 6, firstName: "Мария", lastName: "Дарвиш", middleName: "Владимировна", imgUrl: "/image/2.png", categoryId: 2 },
 ];
 
 const initialTypesWork: TypesWork[] = [
@@ -116,7 +121,9 @@ const initialTypesWorkStages: TypesWorkStages[] = [
 ];
 
 const initialCategoryTechniques: CategoryTechniques[] = [
-    { id: 0, nameCategory: "Техники высшей категории", techniques: [] },
+    { id: 0, nameCategory: "1 категория", techniques: [] },
+    { id: 1, nameCategory: "2 категория", techniques: [] },
+    { id: 2, nameCategory: "3 категория", techniques: [] },
 ];
 
 export const useStore = create<Store>((set) => ({
