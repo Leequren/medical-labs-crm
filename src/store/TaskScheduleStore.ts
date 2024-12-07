@@ -11,8 +11,8 @@ type Task = {
 
 type Store = {
   tasks: Task[];
-  addTask: (task: Task) => void;  // Действие для добавления задачи
-  toggleTaskCompletion: (taskId: number) => void;  // Действие для изменения статуса задачи
+  addTask: (task: Task) => void;
+  toggleTaskCompletion: (taskId: number) => void;
 };
 
 const useStore = create<Store>((set) => ({
@@ -26,16 +26,14 @@ const useStore = create<Store>((set) => ({
     {id: 6, color: "#8504D4", taskName: "Забрать посылку из БьютиМед", time: "17:30", date: "2024-11-07", isCompleted: false},
   ],
 
-  // Метод для добавления задачи
   addTask: (task) => set((state) => ({
-    tasks: [...state.tasks, task],  // Добавляем новую задачу в массив
+    tasks: [...state.tasks, task], 
   })),
 
-  // Метод для переключения статуса задачи (закончена или нет)
   toggleTaskCompletion: (taskId) => set((state) => ({
     tasks: state.tasks.map(task =>
       task.id === taskId
-        ? { ...task, isCompleted: !task.isCompleted }  // Переключаем статус isCompleted
+        ? { ...task, isCompleted: !task.isCompleted } 
         : task
     ),
   })),
