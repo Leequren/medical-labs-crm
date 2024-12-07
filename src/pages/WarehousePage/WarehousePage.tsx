@@ -7,8 +7,7 @@ import ArrowDown from "@img/ArrowDown.svg?react"
 const WarehousePageStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 35px;
-    column-gap: 30px;
+    gap: 30px;
     width: 100%;
     margin-right: 50px;
     height: fit-content;

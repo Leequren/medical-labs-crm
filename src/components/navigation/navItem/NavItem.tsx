@@ -1,5 +1,5 @@
-import { FC, useState } from "react"
-import { NavLink, useNavigate } from "react-router-dom"
+import { FC } from "react"
+import { NavLink } from "react-router-dom"
 import styled from "styled-components"
 
 interface INavItemProps {
