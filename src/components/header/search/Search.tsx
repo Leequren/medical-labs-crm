@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import SearchSvg from '@img/Search.svg?react'
+import SearchSvg from '@img/search.svg?react'
 
 const SearchStyled = styled.div`
     padding-left: 30px;

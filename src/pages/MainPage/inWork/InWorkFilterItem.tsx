@@ -29,7 +29,7 @@ export function InWorkFilterItem() {
     return (
         <InWorkFilterItemStyled>
             <Text>{firstName} {lastName}</Text>
-            <Delete />
+            <Delete strokeWidth={3}/>
         </InWorkFilterItemStyled>
     )
 }

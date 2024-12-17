@@ -115,6 +115,8 @@ const OpenCardButton = styled.div`
     align-items: center;
     cursor: pointer;
     margin-bottom: 5px;
+    font-size: 24px;
+    font-weight: 500;
 `
 
 export function WarehousePage() {

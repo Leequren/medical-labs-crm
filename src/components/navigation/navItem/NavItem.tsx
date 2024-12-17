@@ -26,7 +26,6 @@ const NavItemImageStyled = styled.img`
 
 export const NavItem: FC<INavItemProps> = ({ svgUrl, route }) => {
 
-
 	return (
 		<NavItemStyled to={route}>
 			<NavItemImageStyled src={svgUrl} alt="" />
