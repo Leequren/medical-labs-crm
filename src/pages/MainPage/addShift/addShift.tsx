@@ -153,7 +153,7 @@ const SubmitButton = styled.div`
   cursor: pointer;
 `
 
-export function AddShift({ toggleShift }: { toggleShift: () => void }) {
+export function AddShift({ toggleModal }: { toggleModal: () => void }) {
     const [workTypeCount, setWorkTypeCount] = useState(1)
 
     const addWorkType = () => {
@@ -211,7 +211,7 @@ export function AddShift({ toggleShift }: { toggleShift: () => void }) {
         <AddShiftStyled>
             <Header>
                 <HeaderTitle>Новый наряд</HeaderTitle>
-                <CloseButton onClick={toggleShift} />
+                <CloseButton onClick={toggleModal} />
             </Header>
             <InputContainer>
                 <CustomSelect

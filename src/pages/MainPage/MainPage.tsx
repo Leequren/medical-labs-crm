@@ -6,7 +6,7 @@ import { TaskSchedule } from "./taskSchedule/TaskSchedule"
 import { AddShift } from "./addShift/addShift"
 import { useState } from "react"
 
-const MainPageStyled = styled.div <{$isOpen: boolean}>`
+const MainPageStyled = styled.div <{ $isOpen: boolean }>`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
@@ -30,17 +30,17 @@ const AddShiftContainer = styled.div`
 
 export function MainPage() {
 
-    const [isOpen, setIsOpen] = useState(false)
+	const [isOpen, setIsOpen] = useState(false)
 
-	const toggleShift = () => {
+	const toggleModal = () => {
 		setIsOpen(prevState => !prevState)
 	}
 	return (
 		<MainPageStyled $isOpen={isOpen}>
-			<OrdersStatus toggleShift={toggleShift}/>
+			<OrdersStatus toggleModal={toggleModal} />
 			{isOpen ? (
 				<AddShiftContainer>
-					<AddShift toggleShift={toggleShift} />
+					<AddShift toggleModal={toggleModal} />
 				</AddShiftContainer>
 			) : (
 				<>

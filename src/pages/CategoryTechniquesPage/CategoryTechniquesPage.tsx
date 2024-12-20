@@ -4,6 +4,8 @@ import Plus from "@img/plus.svg?react"
 import { useNavigate } from "react-router-dom"
 import { routes } from "../../config/routes"
 import { CategoryTechniquesPageCard } from "./CategoryTechniquesPageCard"
+import { useState } from "react"
+import { AddCategoryTechniques } from "./addCategoryTechniques/AddCategoryTechniques"
 
 const CategoryTechniquesPageStyled = styled.div`
     display: flex;
@@ -67,24 +69,43 @@ const AddButtonText = styled.h1`
     font-weight: 500;
 `
 
+const AddCategoryTechniquesContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	width: 90%;
+`
+
 export function CategoryTechniquesPage() {
     const navigate = useNavigate()
+
+    const [isOpen, setIsOpen] = useState(false)
+
+	const toggleModal = () => {
+		setIsOpen(prevState => !prevState)
+	}
 
     return (
         <CategoryTechniquesPageStyled>
             <Header>
                 <BackButtonContainer>
                     <ArrowLeft onClick={() => navigate(routes.staff)} cursor="pointer"/>
-                    <TitleText>Врачи</TitleText>
+                    <TitleText>Категории техников</TitleText>
                 </BackButtonContainer>
-                <AddButton onClick={() => navigate(routes.addDoctor)}>
+                <AddButton onClick={() => setIsOpen(true)}>
                     <AddButtonSvgContainer>
                         <Plus stroke="black" />
                     </AddButtonSvgContainer>
-                    <AddButtonText>Добавить врача</AddButtonText>
+                    <AddButtonText>Добавить категорию</AddButtonText>
                 </AddButton>
             </Header>
-            <CategoryTechniquesPageCard />
+            {isOpen ? (
+                <AddCategoryTechniquesContainer>
+                    <AddCategoryTechniques toggleModal={toggleModal}/>
+                </AddCategoryTechniquesContainer>
+            ) : (
+                <CategoryTechniquesPageCard />
+            )}
+            
         </CategoryTechniquesPageStyled>
     )
 }

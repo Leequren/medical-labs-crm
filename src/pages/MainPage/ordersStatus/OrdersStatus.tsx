@@ -51,12 +51,12 @@ const StatusItemContainer = styled.div`
     gap: 65px;
 `
 
-export function OrdersStatus({ toggleShift }: { toggleShift: () => void }) {
+export function OrdersStatus({ toggleModal }: { toggleModal: () => void }) {
 
     return (
         <OrdersStatusStyled>
             <OrdersStatusStyledContainer>
-                <AddButton onClick={() => toggleShift()}>
+                <AddButton onClick={() => toggleModal()}>
                     <AddButtonSvgContainer>
                         <Plus stroke="black" />
                     </AddButtonSvgContainer>
