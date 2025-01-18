@@ -206,8 +206,8 @@ const InputTypeOfWork = styled.input`
     outline: none;
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
-	display: none;
-}
+	    display: none;
+    }
     
 `
 
@@ -216,7 +216,6 @@ const InputTypeOfWorkPrice = styled.span`
     font-size: 24px;
     font-weight: 500;
 `
-
 
 const SubmitButton = styled.div`
   width: 100%;

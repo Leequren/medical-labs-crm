@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom"
 import ArrowLeft from "@img/ArrowLeft.svg?react"
 import Plus from "@img/plus.svg?react"
 import { TypesWorkPageCard } from "./TypesWorkPageCard"
+import { useState } from "react"
+import { AddTypesWork } from "./addTypesWork/AddTypesWork"
 
 const TypesWorkPageStyled = styled.div`
     display: flex;
@@ -72,9 +74,21 @@ const AddButtonText = styled.h1`
     font-weight: 500;
 `
 
+const AddTypeWorkContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	width: 90%;
+`
+
 export function TypesWorkPage() {
 
     const navigate = useNavigate()
+
+    const [isOpen, setIsOpen] = useState(false)
+
+    const toggleModal = () => {
+        setIsOpen(prevState => !prevState)
+    }
 
     return (
         <TypesWorkPageStyled>
@@ -83,16 +97,22 @@ export function TypesWorkPage() {
                     <ArrowLeft onClick={() => navigate(routes.staff)} cursor="pointer" />
                     <TitleText>Вид работы</TitleText>
                 </BackButtonContainer>
-                <AddButton onClick={() => navigate(routes.addTypeWork)}>
+                <AddButton onClick={() => setIsOpen(true)}>
                     <AddButtonSvgContainer>
                         <Plus stroke="black" />
                     </AddButtonSvgContainer>
                     <AddButtonText>Добавить вид работы</AddButtonText>
                 </AddButton>
             </Header>
-            <TypesWorkPageCardContainer>
-                <TypesWorkPageCard />
-            </TypesWorkPageCardContainer>
+            {isOpen ? (
+                <AddTypeWorkContainer>
+                    <AddTypesWork toggleModal={toggleModal} />
+                </AddTypeWorkContainer>
+            ) : (
+                <TypesWorkPageCardContainer>
+                    <TypesWorkPageCard />
+                </TypesWorkPageCardContainer>
+            )}
         </TypesWorkPageStyled>
     )
 }
